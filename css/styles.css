@@ -1,0 +1,312 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --rojo: #da0a0a;
+    --rojo-oscuro: #ad0c0c;
+    --violeta: #701fad;
+}
+
+header {
+    font-size: 1.05em;
+    display: flex;
+    justify-content: space-between;
+    height: 13vh;
+    background: #ffffff;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, var(--rojo) 64%, var(--rojo-oscuro) 92%, var(--violeta) 100%);
+    #logo {
+        height: 100%;
+        width: auto;
+        padding: 1ex;
+        margin-right: 10px;
+    }
+    nav {        
+        display: flex;
+        align-items: center;
+        ul {
+            padding: 1ex;
+            display: flex;
+            flex-wrap: wrap;
+            a {
+                color:#ffffffc1;
+                font-weight: bold;
+                margin: 0.5em;
+                padding: 1em;
+            }
+        }
+    };
+}
+.fa-cart-shopping {
+    margin-right: 1em;
+    display: flex;
+    flex-shrink:inherit;
+    align-items: center !important;
+    justify-content: center !important; 
+}
+
+body {
+    font-family: 'Bangers', system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#home {
+    font-family: 'Monterrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color:#f4f4f4;
+    text-shadow: 0 0 4px #222, 0 0 3px #000000;
+    p {
+        backdrop-filter: blur(2px);
+        padding: 1em;
+    }
+    background-image: 
+        linear-gradient(rgba(69, 69, 69, 0.829), rgba(34, 34, 34, 0.8)),
+        url('../assets/img/payamedicos2.png');
+    background-position: center;
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+
+#productos {
+    p {
+        text-align: center;
+        margin: 1em;
+    }
+}
+
+#lista-productos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    p {
+        text-align: center;
+        margin: 1em;
+    }
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 350px;
+        flex: 1 1 250px;
+        max-width: 300px;
+        margin: 1em;
+        padding: 1em;
+        transition: transform 0.3s ease;
+        &:hover {
+            transform: scale(1.05);
+        }
+        img {
+            width: 75%;
+            max-height: 50%;
+            height: auto;
+            border-radius: 10px;
+        }
+        h3 {
+            text-align: center;
+            margin-top: 0.5em;
+            font-size: 1.2em;
+        }
+    }
+
+}
+#mas-productos {
+    text-align: center;
+    margin: 3em !important;
+    padding: 1em;
+    transition: transform 0.3s ease;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+#reseñas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    article {
+        display: flex;
+        padding: 1em;
+        margin: 1em;
+        transition: transform 0.3s ease;
+        &:hover {
+            border: 2px solid var(--rojo-oscuro);
+        }
+    }
+}
+
+.revisor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1em;
+}
+
+.reseña {
+    flex: 1;
+    font-family: 'Monterrat', sans-serif;
+    padding: 1em;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    font-style: italic;
+    margin: 0.5em 0;
+    p:nth-of-type(2) {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.foto-perfil {
+    border: solid 2px var(--rojo);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    border: var(--rojo-oscuro) solid 3px;
+    text-shadow: 0 0 4px #ffffff, 0 0 3px #b4b4b4;
+    padding: 1ex;
+    background-image: url('../assets/img/fondo-footer.png');
+    p {
+        margin: 0.5ex 0;
+    }
+    form {
+        margin: 0.5ex;
+        fieldset {
+            display: flex;
+        }
+        input {
+            flex: 1;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 0.5em;
+        }   
+        textarea {
+            display: block;
+            width: 100%;
+            height: 10em;
+            flex: 2;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+    }
+    form * {
+        margin: 0.5ex;
+    }
+}
+
+.social {
+    padding: 1em;
+}
+
+button {
+            width: 100%;
+            margin-top:0.5em;
+            padding: 0.5em;
+            background-color: var(--rojo);
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            &:hover {
+                background-color: var(--rojo-oscuro);
+            }
+        }
+
+a {
+    color:var(--rojo);
+    text-decoration: none;
+    &:hover {
+    color: var(--violeta);
+    }
+}
+
+
+ul {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}  
+
+@media (max-width: 768px) {
+    header {
+        height: 7.5vh;
+        font-size: 0.8em;
+     }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+
+    #lista-productos {
+        article {
+            height: 315px;
+            flex: 1 1 125px;
+            max-width: 150px;
+            button {
+                font-size: 0.6em;
+            }
+        }
+    }
+
+    fieldset {
+            flex-direction: column;
+    }
+
+    /* #reseñas {
+
+    } */
+} 
+
+@media (max-width: 310px) {
+    header {
+        font-size: 0.6em;
+    }
+}
