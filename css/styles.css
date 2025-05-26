@@ -43,8 +43,7 @@ header {
     margin-right: 1em;
     display: flex;
     flex-shrink:inherit;
-    align-items: center !important;
-    justify-content: center !important; 
+    align-items: center !important; /* Esto no sé por qué se desactiva al actualizar la página, no sé cómo hacer para que se mantenga verticalmente centrado y no arriba medio oculto */
 }
 
 body {
