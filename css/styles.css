@@ -14,16 +14,16 @@ header {
     font-size: 1.05em;
     display: flex;
     justify-content: space-between;
-    height: 13vh;
+    height: 13vh; 
     background: #ffffff;
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, var(--rojo) 64%, var(--rojo-oscuro) 92%, var(--violeta) 100%);
     #logo {
         height: 100%;
         width: auto;
-        padding: 1ex;
+        padding: 0.5ex;
         margin-right: 10px;
     }
-    nav {        
+    nav {
         display: flex;
         align-items: center;
         ul {
@@ -34,7 +34,7 @@ header {
                 color:#ffffffc1;
                 font-weight: bold;
                 margin: 0.5em;
-                padding: 1em;
+                padding: 0.5em;
             }
         }
     };
@@ -64,7 +64,7 @@ body {
         backdrop-filter: blur(2px);
         padding: 1em;
     }
-    background-image: 
+    background-image:
         linear-gradient(rgba(69, 69, 69, 0.829), rgba(34, 34, 34, 0.8)),
         url('../assets/img/payamedicos2.png');
     background-position: center;
@@ -199,7 +199,7 @@ footer {
             border: 1px solid #ccc;
             border-radius: 5px;
             margin-right: 0.5em;
-        }   
+        }
         textarea {
             display: block;
             width: 100%;
@@ -267,7 +267,7 @@ h2 {
 h3 {
     font-size: 1.5em;
     margin-top: 20px;
-}  
+}
 
 @media (max-width: 768px) {
     header {
@@ -302,7 +302,7 @@ h3 {
     /* #reseñas {
 
     } */
-} 
+}
 
 @media (max-width: 310px) {
     header {
