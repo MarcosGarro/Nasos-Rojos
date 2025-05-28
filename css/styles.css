@@ -14,6 +14,7 @@ header {
     font-size: 1.05em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 13vh; 
     background: #ffffff;
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, var(--rojo) 64%, var(--rojo-oscuro) 92%, var(--violeta) 100%);
@@ -41,10 +42,7 @@ header {
 }
 .fa-cart-shopping {
     margin-right: 1em;
-    display: flex;
-    flex-shrink:inherit;
-    align-items: center !important; /* Esto no sé por qué se desactiva al actualizar la página, no sé cómo hacer para que se mantenga verticalmente centrado y no arriba medio oculto */
-}
+    }
 
 body {
     font-family: 'Bangers', system-ui;
@@ -104,8 +102,10 @@ body {
         }
         img {
             width: 75%;
-            max-height: 50%;
             height: auto;
+            max-height: 50%;
+            object-fit: contain;
+            aspect-ratio: auto;
             border-radius: 10px;
         }
         h3 {
@@ -133,9 +133,10 @@ body {
         display: flex;
         padding: 1em;
         margin: 1em;
+        border: 2px solid transparent;
         transition: transform 0.3s ease;
         &:hover {
-            border: 2px solid var(--rojo-oscuro);
+            border-color: var(--rojo-oscuro);
         }
     }
 }
@@ -182,12 +183,22 @@ footer {
     display: flex;
     flex-direction: column;
     border: var(--rojo-oscuro) solid 3px;
-    text-shadow: 0 0 4px #ffffff, 0 0 3px #b4b4b4;
     padding: 1ex;
     background-image: url('../assets/img/fondo-footer.png');
     p {
         margin: 0.5ex 0;
     }
+
+    #contacto {
+        box-shadow: 0 0 10px rgb(0, 0, 0);
+        text-shadow: 1px 1px 2px #000, -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000;
+        color: #ffffff;
+        background: color-mix(in srgb, var(--violeta) 45%, transparent);
+        border: solid 2px var(--rojo-oscuro);
+        border-radius: 15px;
+        padding: 1em;
+    }
+
     form {
         margin: 0.5ex;
         fieldset {
@@ -217,7 +228,19 @@ footer {
 }
 
 .social {
+    margin: 1em auto;
+    width: fit-content;
+    height: fit-content;
+    gap: 1em;
+    background-color: var(--violeta);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1em;
+    a:hover{
+        color: var(--rojo-oscuro);
+    }
 }
 
 button {
@@ -298,10 +321,6 @@ h3 {
     fieldset {
             flex-direction: column;
     }
-
-    /* #reseñas {
-
-    } */
 }
 
 @media (max-width: 310px) {
